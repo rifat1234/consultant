@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Consultant</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="index.php" style="color:#800000;font-size: 30px;">Consultant</a>
+	    </div>
+	    <ul class="nav navbar-nav">
+	      <li class="active"><a href="index.php">Home</a></li>
+	      <li><a href="#">Ask a Question</a></li>
+	      <li><a href="#">Be a Consultant</a></li>
+	      <li><a href="#">Top Consultant</a></li>
+	    </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	      <li><a href="profile.html"><span class="glyphicon glyphicon-user active"></span>My Profile</a></li>
+	      <li><a href="index.html"><span class="glyphicon glyphicon-log-out"></span>Log out</a></li>
+	    </ul>
+	  </div>
+	</nav>
+	
+	   <div class="container-fluid">
+      <div class="row">
+      	<div class = "leftbar">
+        <div class="col-md-2 sidebar">
+          <h4>Feeds</h4><hr>
+          
+          <ul class="nav-sidebar">
+          	
+            <li><a href="">Top Catagory 1</a></li>
+            <li><a href="">Top Catagory 2</a></li>
+            <li><a href="">Top Catagory 3</a></li>
+            <li><a href="">Top Catagory 4</a></li>
+            <li><a href="">Top Catagory 5</a></li>
+          	
+          </ul>
+          <h4>Trending</h4><hr>
+          
+          <ul class=" nav-sidebar">
+          	
+            <li><a href="">Trending Catagory 1</a></li>
+            <li><a href="">Trending Catagory 2</a></li>
+            <li><a href="">Trending Catagory 3</a></li>
+            <li><a href="">Trending Catagory 4</a></li>
+            <li><a href="">Trending Catagory 5</a></li>
+          	
+          </ul>
+         
+        </div>
+        </div>
+		<div class="col-md-6 col-md-offset-2 main">
+          <div class=" container-fluid">
+		  
+		  <h1>Edit Profile</h1>
+		  <div class = "row">
+		  <div class="col-md-3 col-md-offset-4">
+		  <div class="text-center">
+          <img src="images/pro.jpg" class="avatar img-circle" alt="avatar" >
+         
+		  <h6>Upload a different photo...</h6>
+          
+          <input type="file" class="form-control">
+        </div>
+		  </div>
+		  </div>
+		  <div class="alert alert-info alert-dismissable">
+          <a class="panel-close close" data-dismiss="alert">×</a> 
+          <i class="fa fa-coffee"></i>
+          This is an <strong>alert</strong>. Use this to show important messages to the user.
+        </div>
+		<h3>Personal info</h3>
+		<form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-lg-3 control-label">First name:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="Jane">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Last name:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="Bishop">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Company:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Email:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="janesemail@gmail.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Time Zone:</label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select id="user_time_zone" class="form-control">
+                  <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                  <option value="Alaska">(GMT-09:00) Alaska</option>
+                  <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                  <option value="Arizona">(GMT-07:00) Arizona</option>
+                  <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                  <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                  <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                  <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Username:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="text" value="janeuser">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Password:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="password" value="11111122333">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Confirm password:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="password" value="11111122333">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+              <input type="button" class="btn btn-primary" value="Save Changes">
+              <span></span>
+              <input type="reset" class="btn btn-default" value="Cancel">
+            </div>
+          </div>
+        </form>
+		  
+		  </div>
+		 </div>
+		
+		
+		<br>
+        <div class = "rightbar">
+	        <div class="col-md-3 ">
+	        	<ul class = "nav-sidebar">
+	          		<h4>Consultants </h4>
+	          		<hr>
+	          		<li>
+	          			<div class ="row">
+	          			<div class="col-md-3" >
+	          				<img src="images/pro_pic.jpg" alt="The Mountain Himself" style ="width:50px;height:60px">
+	          			</div>
+	          			<div class="col-md-9" >
+	          				<p><a href ="#">Tamim Ibn Aman</a></p>
+	          				<button class="glyphicon glyphicon-plus"> Follow </button>
+	          			</div>
+	          			</div>
+	          		</li>
+
+
+	          		<li>
+	          			<div class ="row">
+	          			<div class="col-md-3" >
+	          				<img src="images/pro_pic.jpg" alt="The Mountain Himself" style ="width:50px;height:60px">
+	          			</div>
+	          			<div class="col-md-9" >
+	          				<p><a href ="#">Tamim Ibn Aman</a></p>
+	          				<button class="glyphicon glyphicon-plus"> Follow </button>
+	          			</div>
+	          			</div>
+	          		</li>
+	          			<li>
+	          			<div class ="row">
+	          			<div class="col-md-3" >
+	          				<img src="images/pro_pic.jpg" alt="The Mountain Himself" style ="width:50px;height:60px">
+	          			</div>
+	          			<div class="col-md-9" >
+	          				<p><a href ="#">Tamim Ibn Aman</a></p>
+	          				<button class="glyphicon glyphicon-plus"> Follow </button>
+	          			</div>
+	          			</div>
+	          		</li>
+
+	          	</ul>
+	          	<br>
+	          	<ul class = "nav-sidebar">
+	          		<h4>Topics </h4>
+	          		<hr>
+	          		<li>
+	          			<div class ="row">
+	          			<div class="col-md-3" >
+	          				<img src="images/pro_pic.jpg" alt="The Mountain Himself" style ="width:50px;height:60px">
+	          			</div>
+	          			<div class="col-md-9" >
+	          				<p><a href ="#">Psycho</a></p>
+	          				<button class="glyphicon glyphicon-plus"> Follow </button>
+	          			</div>
+	          			</div>
+	          		</li>
+
+
+	          		<li>
+	          			<div class ="row">
+	          			<div class="col-md-3" >
+	          				<img src="images/pro_pic.jpg" alt="The Mountain Himself" style ="width:50px;height:60px">
+	          			</div>
+	          			<div class="col-md-9" >
+	          				<p><a href ="#">Pagol</a></p>
+	          				<button class="glyphicon glyphicon-plus"> Follow </button>
+	          			</div>
+	          			</div>
+	          		</li>
+	          			<li>
+	          			<div class ="row">
+	          			<div class="col-md-3" >
+	          				<img src="images/pro_pic.jpg" alt="The Mountain Himself" style ="width:50px;height:60px">
+	          			</div>
+	          			<div class="col-md-9" >
+	          				<p><a href ="#">Boss</a></p>
+	          				<button class="glyphicon glyphicon-plus"> Follow </button>
+	          			</div>
+	          			</div>
+	          		</li>
+
+	          	</ul>
+	        </div>
+        </div>
+  
+  
+  </body>
+  
+  
+  
+  
+  </html>
