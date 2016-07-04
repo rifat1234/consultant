@@ -7,10 +7,10 @@
 			 
 			  </ul>
 			   <br>
-<div class="tab-content">
+			<div class="tab-content">
 			    <div id="home" class="tab-pane fade in active">
 			     	
-			      <div class = "jumbotron">
+			      <div class = "main_index">
 			       <?php
 						//question & answer
 				      	$con=mysqli_connect("localhost", "root", "", "consult");
@@ -22,10 +22,12 @@
 						    // output data of each row
 						    while($row = mysqli_fetch_assoc($result)) {
 								$valu = $row['username'];
+								echo "<div class = \"jumbotron \" > ";
 								//fetch questioner of question
+								/*
 								$sql2 = "SELECT  * FROM login WHERE username='$valu'";//.$row1['username'];
 								$result2=$con->query($sql2);
-								echo "<div class = \"jumbotron\" style=\"background-color:#e6ffe6;\"> ";
+								
 								if(mysqli_num_rows($result2) > 0){
 									while($row2 = mysqli_fetch_assoc($result2)){
 													$valu = $row2['image_url'].".jpg";
@@ -36,22 +38,22 @@
 													echo "<p class = \"col-md-6\" >".$row2['first_name']." ".$row2['last_name']."</p>";
 													echo "</div><hr>";
 									}
-								}    
+								}  
+								*/  
 								//echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
 						        
-						        echo "<h2>". $row["question"]."</h2><hr>";
-						        echo "<div class = \"row\">";
-								//echo "<button class=\"glyphicon glyphicon-thumbs-up\"> Upvote </button>";
-								echo "<button class=\"glyphicon glyphicon-pencil ans\"> Answer </button>";
-								echo "</div><hr>";
+						        echo "<h2>". $row["question"]."</h2>";
+						        
 								
 								echo "<input class =\"q_id\"type=\"hidden\" name=\"hiddenField\" value=".$row["q_id"].">";
+
 								//fetch answer
 								$sql1 = "SELECT  * FROM answer WHERE q_id=".$row['q_id'];
 								$result1 = $con->query($sql1);
 								if(mysqli_num_rows($result1) > 0){
 									while($row1 = mysqli_fetch_assoc($result1)){
 										$valu = $row1['username'];
+										
 										//fetch answerer of question
 										$sql2 = "SELECT  * FROM login WHERE username='$valu'";//.$row1['username'];
 										$result2=$con->query($sql2);
@@ -63,20 +65,25 @@
 												echo "<div class=\"row\">";
 												echo "<img class = \"col-md-4 img-circle\" src=".$valu. " alt=\"Mountain View\" style=\"width:80px;height:50px;\" >";
 												echo "<p class = \"col-md-6\" >".$row2['first_name']." ".$row2['last_name']."</p>";
-												echo "</div><hr>";
+												echo "</div>";
 											}
 										}
 										//echo "<h3>".$row1['username']."</h3>";
 										echo "<p>".$row1['answer']."</p>";
-										echo "<hr>";
-										echo "<div class = \"row\">";
+										//echo "<hr>";
+										echo "<div class = \"\">";
 										echo "<button class=\"glyphicon glyphicon-thumbs-up upv\"> Upvote </button>";
 										//echo "<button class=\"glyphicon glyphicon-pencil\"> Answer </button>";
-										echo "</div><hr>";
-								 }
+										echo "</div>";
+								 	}
+								}else{
+									echo "<div class = \"\">";
+									//echo "<button class=\"glyphicon glyphicon-thumbs-up\"> Upvote </button>";
+									echo "<button class=\"glyphicon glyphicon-pencil ans\"> Answer </button>";
+									echo "</div>";
 								}
 								
-						        echo "</div><hr>";
+						        echo "</div>";
 						    }
 						} 
 					mysqli_close($con);

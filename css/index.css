@@ -6,3 +6,33 @@ body button{
 	font-family: Arial, sans-serif;
 	font-weight: bolder;
 }
+body h2{
+	color:#000;
+	font-size:20px;
+
+}
+body .main_index{
+	background-color: white;
+	margin:0px;
+	padding:0px;
+	border:0px;
+
+}
+body .main_index .jumbotron{
+	background-color: white;
+	margin:0px;
+	padding:3px;
+	border:0px;
+	border-bottom:.5px;
+	border-style: solid;
+    border-color: #d1e0e0;
+    border-radius: 0px;
+	display:block;
+	overflow: hidden;
+
+
+}
+
+body .main_index .jumbotron:hover{
+	background-color: yellow;
+}
