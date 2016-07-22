@@ -6,8 +6,8 @@ function show_ans(x){
 
  }
 $(document).ready(function(){
-    /*$("button").click(function(){
+    $("body").click(function(){
         location.href = "signin.html";
-    });*/
+    });
     
 });

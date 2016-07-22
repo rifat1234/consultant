@@ -2,19 +2,26 @@
           <div class=" container-fluid">
 			  <ul class=" nav nav-tabs">
 			    <li class="active"><a data-toggle="tab" href="#home">Questions & Answers</a></li>
+			    <!--
 			    <li><a data-toggle="tab" href="#menu1">Article</a></li>
 			    <li><a data-toggle="tab" href="#menu2">Consultants</a></li>
+				-->
 				<li><a data-toggle="tab" href="#menu3">Followed Q & A</a></li>
 			  </ul>
 			   <br>
 			  <div class="tab-content">
-			    <div id="home" class="tab-pane active">
+			    <div id="home" class="tab-pane fade in active">
+			     	
+			      <div class = "main_index">
+
+			    <!--
 				<a href="#credit" class="toggle btn btn-primary btn-block"">Ask a Question</a>
 
 				<div id="credit" class="well hidden">
+	
+
 	<form class="form-horizontal" role="form" action="question.php" method = "get">
-    
-    <div class="form-group">
+        <div class="form-group">
       <div>          
         <textarea type="comment" class="form-control" id="question" name = "question" placeholder="Question" rows="3">Write your question here</textarea>
       </div>
@@ -28,7 +35,7 @@
   
   </br></br>
 	</div>
-
+-->
 	<?php
 		//quesiton answer part
 		include 'main_home_QA.php';
@@ -57,7 +64,7 @@
 				      </div>
 			      </div>
 -->
-			
+			</div>
 			    </div>
 			    <div id="menu1" class="tab-pane">
 			     <?php

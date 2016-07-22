@@ -42,7 +42,7 @@ if(isset($_SESSION["login"]) and $_SESSION["login"]!="ok"){
       		include 'main_home.php';
       		include 'rightbar_after_login.php'; 
       	?>
-
+      	 <button type="button" id="fixedbutton" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-plus" onclick="location.href='question_ask.php';"></i></button>
         
       </div>
     </div>

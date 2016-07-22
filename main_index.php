@@ -87,14 +87,14 @@
 										echo "<p>".$ans."</p>";
 										//echo "<hr>";
 										echo "<div class = \"\">";
-										echo "<button class=\"glyphicon glyphicon-thumbs-up upv\"> Upvote </button>";
+										echo "<button class=\"btn btn-default btn-sm upv\"> Upvote </button>";
 										//echo "<button class=\"glyphicon glyphicon-pencil\"> Answer </button>";
 										echo "</div>";
 								 	//}
 								}else{
 									echo "<div class = \"\">";
 									//echo "<button class=\"glyphicon glyphicon-thumbs-up\"> Upvote </button>";
-									echo "<button class=\"glyphicon glyphicon-pencil ans\"> Answer </button>";
+									echo "<button class=\"btn btn-default btn-sm glyphicon glyphicon-pencil ans\"> Answer </button>";
 									echo "</div>";
 								}
 								

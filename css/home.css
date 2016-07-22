@@ -1,3 +1,4 @@
+/*
 body button{
 	background-color:#e6e6ff;
 	height:30px;
@@ -5,4 +6,59 @@ body button{
 	font-size:12px ;
 	font-family: Arial, sans-serif;
 	font-weight: bolder;
+}
+*/
+body button{
+	margin:5px;
+}
+
+body .main_index{
+	background-color: white;
+	margin:0px;
+	padding:0px;
+	border:0px;
+
+}
+body .main_index *{
+	font-size: 14px;
+}
+body .main_index h2 font{
+	color:#000;
+	font:bold;
+	font-weight: 900;
+	font-size:20px;
+
+
+}
+body .main_index .jumbotron{
+	background-color: white;
+	margin:0px;
+	padding:10px;
+	border:0px;
+	border-bottom:.5px;
+	border-style: solid;
+    border-color: #d1e0e0;
+    border-radius: 0px;
+	display:block;
+	overflow: hidden;
+
+
+}
+
+body .main_index .jumbotron:hover{
+	background-color: #f0f5f5;
+}
+#fixedbutton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+}
+
+body .btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
 }
