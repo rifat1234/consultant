@@ -58,7 +58,10 @@ if(isset($_SESSION["login"]) and $_SESSION["login"]=="ok"){
       		include 'leftbar.php';
       		include 'main_index.php';
         	include 'rightbar_index.php';
+          //<a href="#head"><img src="http://placehold.it/200x100" id="fixedbutton"></a>
         ?>
+        <button type="button" id="fixedbutton" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-plus"></i></button>
+        
       </div>
     </div>
 

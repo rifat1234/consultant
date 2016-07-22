@@ -41,17 +41,19 @@
 								}  
 								*/  
 								//echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+						       	$url ="\"". "QA.php?q_id=".$row["q_id"]."\"";
 						        
-						        echo "<h2>". $row["question"]."</h2>";
+						        echo "<h2><a href=".$url."><font color = \"#000\"> ". $row["question"]."</font></a></h2>";
 						        
 								
 								echo "<input class =\"q_id\"type=\"hidden\" name=\"hiddenField\" value=".$row["q_id"].">";
 
 								//fetch answer
-								$sql1 = "SELECT  * FROM answer WHERE q_id=".$row['q_id'];
+								$sql1 = "SELECT  * FROM answer WHERE q_id=".$row['q_id']. " ORDER BY up_vote DESC";
 								$result1 = $con->query($sql1);
 								if(mysqli_num_rows($result1) > 0){
-									while($row1 = mysqli_fetch_assoc($result1)){
+									//while($row1 = mysqli_fetch_assoc($result1)){
+										$row1 = mysqli_fetch_assoc($result1);
 										$valu = $row1['username'];
 										
 										//fetch answerer of question
@@ -62,20 +64,33 @@
 												$valu = $row2['image_url'].".jpg";
 											
 												//echo "<h3>".$valu."</h3>";
-												echo "<div class=\"row\">";
-												echo "<img class = \"col-md-4 img-circle\" src=".$valu. " alt=\"Mountain View\" style=\"width:80px;height:50px;\" >";
-												echo "<p class = \"col-md-6\" >".$row2['first_name']." ".$row2['last_name']."</p>";
+												echo "<div class=\"row\" style=\"\">";
+												echo "<img class = \"col-md-1 img-circle\" src=".$valu. " alt=\"Mountain View\" style=\"width:65px;height:40px;\" >";
+												echo "<p class = \"\" style=\" \">".$row2['first_name']." ".$row2['last_name']."</p>";
 												echo "</div>";
 											}
 										}
 										//echo "<h3>".$row1['username']."</h3>";
-										echo "<p>".$row1['answer']."</p>";
+										$ans = $row1['answer'];
+										if(strlen($ans)>170){
+											
+											$ans_st = substr($ans,0,170);
+											$ans_st = substr($ans_st, 0, strrpos($ans_st, ' '));
+											
+											$ans_res=substr($ans,strrpos($ans_st, ' ')-1);
+											$ans_res="<span class=\"hidden_ans\"style=\"display:none;\">".$ans_res."</span>"; 
+											
+											$ans = $ans_st."<button class = \"btn btn-link more\" onclick=\"show_ans(this)\">(more)</button>".$ans_res;
+
+										}
+
+										echo "<p>".$ans."</p>";
 										//echo "<hr>";
 										echo "<div class = \"\">";
 										echo "<button class=\"glyphicon glyphicon-thumbs-up upv\"> Upvote </button>";
 										//echo "<button class=\"glyphicon glyphicon-pencil\"> Answer </button>";
 										echo "</div>";
-								 	}
+								 	//}
 								}else{
 									echo "<div class = \"\">";
 									//echo "<button class=\"glyphicon glyphicon-thumbs-up\"> Upvote </button>";

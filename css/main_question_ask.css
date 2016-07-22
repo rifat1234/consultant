@@ -1,0 +1,13 @@
+body .sug{
+	display:block;
+	width:100%;
+	padding:1%;
+	font-size:20px;
+	border:0px solid grey;
+}
+body .sug:hover{
+	background-color: #f0f5f5;
+}
+body .in_box .cross:hover{
+	color: red;
+}
