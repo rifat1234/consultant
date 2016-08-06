@@ -17,6 +17,7 @@ body .main_index{
 	margin:0px;
 	padding:0px;
 	border:0px;
+	
 
 }
 body .main_index *{
@@ -61,4 +62,14 @@ body .btn-circle.btn-xl {
   font-size: 24px;
   line-height: 1.33;
   border-radius: 35px;
+}
+body .main{
+	background-color: white;
+	padding:0px;
+	border: 0px;
+	margin-top: 8px;
+}
+body .main .container-fluid{
+	background-color: white;
+	padding: 0px;
 }

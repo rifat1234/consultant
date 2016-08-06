@@ -21,6 +21,7 @@ $(document).ready(function(){
 	$(".rightbar .person button").click(function(){
        //$(this).css("background-color","yellow");
 	  $(this).html('Followed');
+	  $(this).removeClass('glyphicon glyphicon-plus');
 	  var par = $(this).parent();
 	  par = $(par).parent();
 	  par = $(par).parent();
@@ -53,7 +54,8 @@ $(document).ready(function(){
        //alert($(this).html());
 		  if($(this).html()=="Followed"){
 		  		//alert("unfollow");
-		  		$(this).html('Follow');
+		  		$(this).html(' Follow');
+		  		$(this).addClass('glyphicon glyphicon-plus')
 		  		//alert("working till this ");
 			  	var par = $(this).parent();
 			  	var value = $(par).find(".fol_hid");
@@ -75,6 +77,7 @@ $(document).ready(function(){
 		  }else{
 		  	 // alert("following");
 			  $(this).html('Followed');
+			  $(this).removeClass('glyphicon glyphicon-plus');
 			  var par = $(this).parent();
 			  var value = $(par).find(".fol_hid");
 			 

@@ -26,25 +26,9 @@
   </head>
   <body>
 
-	<nav class="navbar navbar-default navbar-fixed-top">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="index.php" style="color:#800000;font-size: 30px;">Consultant</a>
-	    </div>
-	    <ul class="nav navbar-nav">
-	      <li class="active"><a href="index.php">Home</a></li>
-	      <li><a href="question.html">Ask a Question</a></li>
-	      <li><a href="be_a_consultant.php">Be a Consultant</a></li>
-	      <li><a href="top_consult.php">Top Consultants</a></li>
-		  <li><a href="contact.php">Contact Us</a></li>
-
-	    </ul>
-	    <ul class="nav navbar-nav navbar-right ">
-	      <li><a href="upload.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-	      <li><a href="signin.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-	    </ul>
-	  </div>
-	</nav>
+  	<?php 
+      include 'menubar_after_login.php'; 
+    ?>
 	  
     <div class="container-fluid">
       <div class="row">
@@ -96,17 +80,38 @@
           //alert($(x).html());
           $(".in_box").append('<button style="width:auto;margin:3px;padding:2px;" class="btn "><span class="cat">'+$(x).html()+'</span><span class="glyphicon glyphicon-remove cross" onclick="removeTag(this)"></span></button>');
           $("#tag").val("");
+          $("#livesearch").empty();
       }
       function removeTag(x){
         var par = $(x).parent();
         $(par).remove();
       }
       function questionPost(){
+        var val = $("#question").val();
+        if(val=="")alert("Ask a question");
+        
+        
         var categorys = $("body .in_box").find(".cat");
+        var cats="";
         for(var i=0;i<categorys.length;i++){
-          alert($(categorys[i]).text());
+          //alert($(categorys[i]).text());
+          if(i==0){
+            cats=$(categorys[i]).text();
+          }else{
+            cats+="~";
+            cats+=$(categorys[i]).text();
+          }
         }
+        $.ajax(
+        {
+          type:'GET',
+          url:'question.php',
+          data:{question:val,category:cats},
+          
+        });
+        //alert(cats);
       }
+      
     </script>
 
     <!--<script type="text/javascript" src="js/index.js"></script>-->

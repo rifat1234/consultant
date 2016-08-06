@@ -25,12 +25,12 @@
 							  $cnt=$cnt-1;
 						      echo "<div class = fol>";
 							  echo "<input type =\"hidden\"  class =\"fol_hid\" value=".$row['username']. ">";
-							  echo "<li><div class =\"row\"><div class=\"col-md-3\" >";
+							  echo "<li><div class =\"row\"><div class=\"col-md-3\" style=\"padding-left:30px;\" >";
 							  echo "<img src=".$row['image_url'].".jpg alt=\"The Mountain Himself\" style =\"width:50px;height:60px\">";
 							
 	          			echo "</div><div class=\"col-md-9\" >
-	          				<p><a href =\"#\">".$row['first_name'].' '.$row['last_name']."</a></p>
-	          				<button class=\"glyphicon glyphicon-plus fol_but\"> Follow </button>
+	          				<p style=\"\"><a href =\"#\">".$row['first_name'].' '.$row['last_name']."</a></p>
+	          				<button class=\"glyphicon glyphicon-plus fol_but btn btn-default\"> Follow </button>
 	          			</div>
 	          			</div></li></div>";
 						    }
@@ -63,9 +63,9 @@
 	          						$res = $con->query($sql);
 	          						$res = mysqli_fetch_assoc($res);
 
-	          						$butn = "<button class=\"glyphicon glyphicon-plus\"> Follow </button>";
+	          						$butn = "<button class=\"glyphicon glyphicon-plus btn btn-default\"> Follow </button>";
 	          						if($res['cnt']>0){
-	          							$butn ="<button class=\"\">Followed</button>";
+	          							$butn ="<button class=\"btn btn-default\">Followed</button>";
 	          						}
 
 	          						$sz = count($ar);
@@ -74,13 +74,11 @@
 	          						if($sz==count($ar))continue;
 	          						$apnd =  "<input type =\"hidden\"  class =\"fol_hid\" value=".$row['c_id']. ">";
 	          						echo "<li>
-	          						<div class =\"row\">
-	          						<div class=\"col-md-3\" >
-	          						<img src=\"images/pro_pic.jpg\" alt=\"The Mountain Himself\" style =\"width:50px;height:60px\">
-	          						</div>
-	          						<div class=\"col-md-9\" >".$apnd."
+	          						<div class =\"row top\">
+	          					
+	          						<div class=\"col-md-12\" >".$apnd."
 	          							
-	          							<p><a href =\"#\">".$c_name."</a></p>".$butn.
+	          							<p style=\"font-weight:bold;\">".$c_name."</p>".$butn.
 	          							"
 	          						</div>
 	          						</div>

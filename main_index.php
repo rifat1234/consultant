@@ -2,8 +2,8 @@
           <div class=" container-fluid">
 			  <ul class=" nav nav-tabs">
 			    <li class="active"><a data-toggle="tab" href="#home">Questions & Answers</a></li>
-			    <li><a data-toggle="tab" href="#menu1">Article</a></li>
-			    <li><a data-toggle="tab" href="#menu2">Consultants</a></li>
+			    <!--<li><a data-toggle="tab" href="#menu1">Article</a></li>
+			    <li><a data-toggle="tab" href="#menu2">Consultants</a></li>-->
 			 
 			  </ul>
 			   <br>

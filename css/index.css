@@ -58,3 +58,13 @@ body .btn-circle.btn-xl {
   line-height: 1.33;
   border-radius: 35px;
 }
+body .main{
+	background-color: white;
+	padding:0px;
+	border: 0px;
+	margin-top:8px;
+}
+body .main .container-fluid{
+	background-color: white;
+	padding: 0px;
+}

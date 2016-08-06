@@ -29,7 +29,6 @@ if(isset($_SESSION["login"]) and $_SESSION["login"]!="ok"){
 	  
     <![endif]-->
 	
-</script>
   </head>
   <body>
 	<?php 

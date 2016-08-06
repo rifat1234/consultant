@@ -54,6 +54,10 @@ body {
   }
   
 }
+.rightbar .col-md-3{
+  background-color: white;
+  padding: 0px;
+}
 .rightbar .nav-sidebar{
     border-left: 1px solid #eee;
 }
@@ -62,9 +66,22 @@ body {
     list-style-type: none;
 }
 .rightbar button{
-  background: #e6e6ff;
-  height: 30px;
+  
   width: 100px;
+  margin:0px;
+  padding: 3px;
+}
+.rightbar .fol{
+  background-color: white;
+  padding: 3px;
+  border:0px solid black;
+  margin:3px;
+}
+.rightbar .top{
+  background-color: white;
+  padding: 3px;
+  border:0px solid black;
+  margin:5px;
 }
 /* Sidebar navigation */
 .leftbar .nav-sidebar {
