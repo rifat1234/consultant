@@ -5,9 +5,13 @@ function show_ans(x){
     	par.find('.hidden_ans').css("display","inline");
 
  }
+
+ /*
 $(document).ready(function(){
     $("body").click(function(){
         location.href = "signin.html";
     });
     
 });
+
+*/

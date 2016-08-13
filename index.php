@@ -19,7 +19,8 @@ if(isset($_SESSION["login"]) and $_SESSION["login"]=="ok"){
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
-	<link href="css/index.css" rel="stylesheet">
+	  <link href="css/index.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,16 +41,14 @@ if(isset($_SESSION["login"]) and $_SESSION["login"]=="ok"){
          <li ><div style="display:block;"><input type="text" class="form-control input-lg " placeholder="Search Consultant " style="height:30px;width:580px;margin:10px;padding:7px;" /></div></li>
         
       </ul>
-	    <ul class="nav navbar-nav navbar-right ">
+	    <ul class="nav navbar-nav navbar-right ">  
 	      <li><a href="upload.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-	      <li><a href="signin.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	       <li><a type="button" data-toggle="modal" href="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
 	    </ul>
 	  </div>
 	</nav>
-	  
     <div class="container-fluid">
       <div class="row">
-      	
       	<!---code of the leftbar(followed & trending topics)-->
       	<?php
       		include 'leftbar.php';
@@ -59,6 +58,28 @@ if(isset($_SESSION["login"]) and $_SESSION["login"]=="ok"){
         ?>
         <button type="button" id="fixedbutton" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-plus"></i></button>
         
+
+        <!--login pop up starts-->
+       <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+        <div class="loginmodal-container">
+          <h1>Login to Your Account</h1>
+          <br>
+          <form action="signin.php" method ="get">
+          <input type="email" id="email" name ="email"  placeholder="Email address" required="" autofocus="">
+          <input type="password" id="pass" name="pass"  placeholder="Password" required="" autofocus="">
+          <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+          </form>
+          
+          <div class="login-help">
+          <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" style="float: right;" >Close</button>
+          <a href="upload.html">Register</a> - <a href="#">Forgot Password</a>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!--login popup ends -->
+
       </div>
     </div>
 
