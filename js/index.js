@@ -1,3 +1,9 @@
+
+    $(window).load(function(){
+        $('#login-modal').modal('show');
+    });
+
+
 function show_ans(x){
     	//alert("its working");
     	$(x).hide();
