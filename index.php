@@ -42,8 +42,9 @@ if(isset($_SESSION["login"]) and $_SESSION["login"]=="ok"){
         
       </ul>
 	    <ul class="nav navbar-nav navbar-right ">  
-	      <li><a href="upload.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+	       <li><a type="button" data-toggle="modal" href="#signup-modal"><span class="glyphicon glyphicon-user"></span> sign up</a></li>
 	       <li><a type="button" data-toggle="modal" href="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+        
 	    </ul>
 	  </div>
 	</nav>
@@ -73,12 +74,16 @@ if(isset($_SESSION["login"]) and $_SESSION["login"]=="ok"){
           
           <div class="login-help">
           <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" style="float: right;" >Close</button>
-          <a href="upload.html">Register</a> - <a href="#">Forgot Password</a>
+          <a data-dismiss="modal" data-toggle="modal" href="#signup-modal" >Register</a> - <a href="#">Forgot Password</a>
           </div>
         </div>
       </div>
       </div>
       <!--login popup ends -->
+
+      <?php 
+      include 'signup_popup.php';
+      ?>
 
       </div>
     </div>

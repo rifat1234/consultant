@@ -60,7 +60,7 @@ VALUES ('$val1', '$val2','$val3','$val4','$val5')";
 
 if (mysqli_query($con, $sql)) {
     echo "New record created successfully";
-    header('Location: signin.php');
+    header('Location: index.php#login-modal');
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($con);
 }
