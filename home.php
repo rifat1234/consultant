@@ -37,20 +37,86 @@ if(isset($_SESSION["login"]) and $_SESSION["login"]!="ok"){
     <div class="container-fluid">
       <div class="row">
       	<?php 
+          include 'question_modal.php';
       		include 'leftbar.php';
       		include 'main_home.php';
       		include 'rightbar_after_login.php'; 
+
       	?>
-      	 <button type="button" id="fixedbutton" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-plus" onclick="location.href='question_ask.php';"></i></button>
+         <button type="button" id="fixedbutton" class="btn btn-success btn-circle btn-xl" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-plus"></i></button>
         
       </div>
     </div>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+     <script>
+      $(document).ready(function(e){
+        $( "#tag" ).keypress(function( event ) {
+          if ( event.which == 32 ) {
+             //alert($(this).val());
+             $(".in_box").append('<button style="width:auto;margin:3px;padding:2px;" class="btn "><span class="cat">'+$(this).val()+'</span><span class="glyphicon glyphicon-remove cross" onclick="removeTag(this)"></span></button>');
+             $(this).val("");
+          }
+        });
+        $("#tag").keyup(function()
+        {
+          $("#livesearch").show();
+          var x= $(this).val();
+          $.ajax(
+          {
+            type:'GET',
+            url:'livesearch_category.php',
+            data:'q='+x,
+            success:function(data)
+            {
+              $("#livesearch").html(data);
+            }
+            ,
+          });
+        });
+      })
+      function addTag(x){
+          //alert($(x).html());
+          $(".in_box").append('<button style="width:auto;margin:3px;padding:2px;" class="btn "><span class="cat">'+$(x).html()+'</span><span class="glyphicon glyphicon-remove cross" onclick="removeTag(this)"></span></button>');
+          $("#tag").val("");
+          $("#livesearch").empty();
+      }
+      function removeTag(x){
+        var par = $(x).parent();
+        $(par).remove();
+      }
+      function questionPost(){
+        var val = $("#question").val();
+        if(val=="")alert("Ask a question");
+        
+        
+        var categorys = $("body .in_box").find(".cat");
+        var cats="";
+        for(var i=0;i<categorys.length;i++){
+          //alert($(categorys[i]).text());
+          if(i==0){
+            cats=$(categorys[i]).text();
+          }else{
+            cats+="~";
+            cats+=$(categorys[i]).text();
+          }
+        }
+        $.ajax(
+        {
+          type:'GET',
+          url:'question.php',
+          data:{question:val,category:cats},
+          
+        });
+        //alert(cats);
+      }
+      
+    </script>
+
     <script type="text/javascript" src ="js/home.js"></script>
   </body>
 </html>

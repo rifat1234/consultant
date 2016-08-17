@@ -1,7 +1,8 @@
  <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true" style="display: none;">
         <div class="modal-dialog">
         <div class="loginmodal-container">
-          <h1>Signup for Your Account</h1>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h1>Signup Here</h1>
           <br>
           <form action="upload.php" method ="post" enctype="multipart/form-data" onsubmit="return validateForm(this);">
           <input type="text" name ="firstname" id ="firstname" placeholder="firstname" class = "required">

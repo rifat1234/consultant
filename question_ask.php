@@ -40,7 +40,7 @@
         	include 'rightbar_index.php';
           //<a href="#head"><img src="http://placehold.it/200x100" id="fixedbutton"></a>
         ?>
-        <button type="button" id="fixedbutton" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-plus" onclick="location.href='question_ask.php';"></i></button>
+         <button type="button" id="fixedbutton" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-plus" onclick="location.href='question_ask.php';"></i></button>
         
       </div>
     </div>

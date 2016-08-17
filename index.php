@@ -64,7 +64,9 @@ if(isset($_SESSION["login"]) and $_SESSION["login"]=="ok"){
        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
         <div class="modal-dialog">
         <div class="loginmodal-container">
-          <h1>Login to Your Account</h1>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h1>Login Here</h1>
+          
           <br>
           <form action="signin.php" method ="get">
           <input type="email" id="email" name ="email"  placeholder="Email address" required="" autofocus="">
