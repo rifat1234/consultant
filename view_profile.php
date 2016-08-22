@@ -79,6 +79,11 @@ $con=mysqli_connect("localhost", "root", "", "consult");
 $val2 = $_SESSION['username'];
 //$val2="rifat@gmail.com";
 
+if(!empty($_GET['id'])){
+	$val2=$_GET['id'];
+}
+
+
 $sql = "SELECT * FROM login WHERE username='$val2'" ;
 $result=mysqli_query($con,$sql);
 
@@ -106,7 +111,11 @@ while($row2 = mysqli_fetch_assoc($result2)) {
 
 	}
 	*/
-echo '<h4 class="cap"><a href="update_profile.php">Edit Profile</a></h4>';
+
+if(empty($_GET['id'])){
+	echo '<h4 class="cap"><a href="update_profile.php">Edit Profile</a></h4>';
+
+}
 
 ?>
 			    </div>

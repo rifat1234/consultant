@@ -29,7 +29,8 @@
 							  echo "<img src=".$row['image_url'].".jpg alt=\"The Mountain Himself\" style =\"width:50px;height:60px\">";
 							
 	          			echo "</div><div class=\"col-md-9\" >
-	          				<p style=\"\"><a href =\"#\">".$row['first_name'].' '.$row['last_name']."</a></p>
+
+	          				<p style=\"\"><a href =\"view_profile.php?id=".$row['username']."\"> ".$row['first_name'].' '.$row['last_name']."</a></p>
 	          				<button class=\"glyphicon glyphicon-plus fol_but btn btn-default\"> Follow </button>
 	          			</div>
 	          			</div></li></div>";
